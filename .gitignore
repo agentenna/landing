@@ -28,9 +28,26 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# backups
+.backups/*
+.backups
+
+# Specs
+spec/
+.spec/
+
+
 # env files (can opt-in for committing if needed)
 .env*
+.env.local
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Agentic files
+.claude
+.deepseek
+.groq
+.agents
+.gemini

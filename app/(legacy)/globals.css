@@ -5,125 +5,670 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-    --background: oklch(1 0 0);
-    --foreground: oklch(0.145 0 0);
-    --card: oklch(1 0 0);
-    --card-foreground: oklch(0.145 0 0);
-    --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.145 0 0);
-    --primary: oklch(0.514 0.222 16.935);
-    --primary-foreground: oklch(0.969 0.015 12.422);
-    --secondary: oklch(0.967 0.001 286.375);
-    --secondary-foreground: oklch(0.21 0.006 285.885);
-    --muted: oklch(0.97 0 0);
-    --muted-foreground: oklch(0.556 0 0);
-    --accent: oklch(0.97 0 0);
-    --accent-foreground: oklch(0.205 0 0);
-    --destructive: oklch(0.577 0.245 27.325);
-    --border: oklch(0.922 0 0);
-    --input: oklch(0.922 0 0);
-    --ring: oklch(0.708 0 0);
-    --chart-1: oklch(0.81 0.117 11.638);
-    --chart-2: oklch(0.645 0.246 16.439);
-    --chart-3: oklch(0.586 0.253 17.585);
-    --chart-4: oklch(0.514 0.222 16.935);
-    --chart-5: oklch(0.455 0.188 13.697);
-    --radius: 0.45rem;
-    --sidebar: oklch(0.985 0 0);
-    --sidebar-foreground: oklch(0.145 0 0);
-    --sidebar-primary: oklch(0.586 0.253 17.585);
-    --sidebar-primary-foreground: oklch(0.969 0.015 12.422);
-    --sidebar-accent: oklch(0.97 0 0);
-    --sidebar-accent-foreground: oklch(0.205 0 0);
-    --sidebar-border: oklch(0.922 0 0);
-    --sidebar-ring: oklch(0.708 0 0);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.514 0.222 16.935);
+  --primary-foreground: oklch(0.969 0.015 12.422);
+  --secondary: oklch(0.967 0.001 286.375);
+  --secondary-foreground: oklch(0.21 0.006 285.885);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.81 0.117 11.638);
+  --chart-2: oklch(0.645 0.246 16.439);
+  --chart-3: oklch(0.586 0.253 17.585);
+  --chart-4: oklch(0.514 0.222 16.935);
+  --chart-5: oklch(0.455 0.188 13.697);
+  --radius: 0.45rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.586 0.253 17.585);
+  --sidebar-primary-foreground: oklch(0.969 0.015 12.422);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
 }
 
 .dark {
-    --background: oklch(0.145 0 0);
-    --foreground: oklch(0.985 0 0);
-    --card: oklch(0.205 0 0);
-    --card-foreground: oklch(0.985 0 0);
-    --popover: oklch(0.205 0 0);
-    --popover-foreground: oklch(0.985 0 0);
-    --primary: oklch(0.455 0.188 13.697);
-    --primary-foreground: oklch(0.969 0.015 12.422);
-    --secondary: oklch(0.274 0.006 286.033);
-    --secondary-foreground: oklch(0.985 0 0);
-    --muted: oklch(0.269 0 0);
-    --muted-foreground: oklch(0.708 0 0);
-    --accent: oklch(0.269 0 0);
-    --accent-foreground: oklch(0.985 0 0);
-    --destructive: oklch(0.704 0.191 22.216);
-    --border: oklch(1 0 0 / 10%);
-    --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.556 0 0);
-    --chart-1: oklch(0.81 0.117 11.638);
-    --chart-2: oklch(0.645 0.246 16.439);
-    --chart-3: oklch(0.586 0.253 17.585);
-    --chart-4: oklch(0.514 0.222 16.935);
-    --chart-5: oklch(0.455 0.188 13.697);
-    --sidebar: oklch(0.21 0.006 285.885);
-    --sidebar-foreground: oklch(0.985 0 0);
-    --sidebar-primary: oklch(0.645 0.246 16.439);
-    --sidebar-primary-foreground: oklch(0.969 0.015 12.422);
-    --sidebar-accent: oklch(0.269 0 0);
-    --sidebar-accent-foreground: oklch(0.985 0 0);
-    --sidebar-border: oklch(1 0 0 / 10%);
-    --sidebar-ring: oklch(0.556 0 0);
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.455 0.188 13.697);
+  --primary-foreground: oklch(0.969 0.015 12.422);
+  --secondary: oklch(0.274 0.006 286.033);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.81 0.117 11.638);
+  --chart-2: oklch(0.645 0.246 16.439);
+  --chart-3: oklch(0.586 0.253 17.585);
+  --chart-4: oklch(0.514 0.222 16.935);
+  --chart-5: oklch(0.455 0.188 13.697);
+  --sidebar: oklch(0.21 0.006 285.885);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.645 0.246 16.439);
+  --sidebar-primary-foreground: oklch(0.969 0.015 12.422);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
 }
 
 @theme inline {
-    --font-sans: var(--font-sans);
-    --font-heading: var(--font-heading);
-    --color-sidebar-ring: var(--sidebar-ring);
-    --color-sidebar-border: var(--sidebar-border);
-    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-    --color-sidebar-accent: var(--sidebar-accent);
-    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-    --color-sidebar-primary: var(--sidebar-primary);
-    --color-sidebar-foreground: var(--sidebar-foreground);
-    --color-sidebar: var(--sidebar);
-    --color-chart-5: var(--chart-5);
-    --color-chart-4: var(--chart-4);
-    --color-chart-3: var(--chart-3);
-    --color-chart-2: var(--chart-2);
-    --color-chart-1: var(--chart-1);
-    --color-ring: var(--ring);
-    --color-input: var(--input);
-    --color-border: var(--border);
-    --color-destructive: var(--destructive);
-    --color-accent-foreground: var(--accent-foreground);
-    --color-accent: var(--accent);
-    --color-muted-foreground: var(--muted-foreground);
-    --color-muted: var(--muted);
-    --color-secondary-foreground: var(--secondary-foreground);
-    --color-secondary: var(--secondary);
-    --color-primary-foreground: var(--primary-foreground);
-    --color-primary: var(--primary);
-    --color-popover-foreground: var(--popover-foreground);
-    --color-popover: var(--popover);
-    --color-card-foreground: var(--card-foreground);
-    --color-card: var(--card);
-    --color-foreground: var(--foreground);
-    --color-background: var(--background);
-    --radius-sm: calc(var(--radius) * 0.6);
-    --radius-md: calc(var(--radius) * 0.8);
-    --radius-lg: var(--radius);
-    --radius-xl: calc(var(--radius) * 1.4);
-    --radius-2xl: calc(var(--radius) * 1.8);
-    --radius-3xl: calc(var(--radius) * 2.2);
-    --radius-4xl: calc(var(--radius) * 2.6);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    }
+  }
   body {
     @apply bg-background text-foreground;
-    }
+  }
   html {
     @apply font-sans;
-    }
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   Agentenna design system v3 — dark room, mixed modules.
+   Tokens ported verbatim from the design project (tokens/*.css).
+   Compressed gray spectrum: no pure white, no pure black.
+   ════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* room / page */
+  --page-light: #2c2d29;
+  --page-mid: #242522;
+  --page-well: #181916;
+  --surface-page: var(--page-mid);
+  /* module surfaces */
+  --surface-plate: #d8d6d0;
+  --surface-plate-raised: #e1dfd9;
+  --surface-plate-sunken: #cccac3;
+  --surface-chassis: #1a1b1a;
+  --surface-chassis-raised: #232423;
+  --surface-screen: #141513;
+  --surface-screen-deep: #101110;
+  --surface-tray: #c7c5be;
+  --surface-tray-dark: #121311;
+  --scrim: rgba(20, 20, 18, 0.5);
+  /* signal red — THE primary */
+  --red-400: #e8604f;
+  --red-500: #df3a2c;
+  --red-600: #c02e21;
+  --red-700: #992217;
+  --accent: var(--red-500);
+  --accent-hover: var(--red-600);
+  --accent-press: var(--red-700);
+  --text-on-accent: #f7f5ef;
+  /* LED indicator colors — small glowing dots ONLY, never fills */
+  --led-ok: #b5fa15;
+  --led-warn: #eaf212;
+  --led-alert: #fb2c1e;
+  --led-off: #63625c;
+  --led-off-dark: #3c3d39;
+  --status-ok-text: #3d5700;
+  --status-ok-text-on-dark: #9fd41f;
+  --status-alert-text: var(--red-600);
+  /* ink text — faceplate surfaces ONLY (collapses on the room gray) */
+  --text-strong: #141512;
+  --text-body: #1d1e1c;
+  --text-muted: #5c5a53;
+  --text-faint: #8b8981;
+  --link: var(--red-600);
+  --link-hover: var(--red-700);
+  /* on-dark text — chassis, screens */
+  --text-on-dark: #d8d6d0;
+  --text-on-dark-muted: #8f8d86;
+  --text-on-dark-faint: #5e5d57;
+  /* on-page text — content directly on the room */
+  --text-on-page: #dcdad4;
+  --text-on-page-muted: #98968e;
+  --link-on-page: #e9705f;
+  --link-on-page-hover: #f08a7b;
+  /* borders */
+  --border-default: #a9a69f;
+  --border-strong: #1d1e1c;
+  --border-on-dark: #333431;
+  --border-on-dark-strong: #4b4c48;
+
+  /* typography — Space Grotesk (display + body), IBM Plex Mono (data, labels, code) */
+  --font-display: var(--font-sans);
+  --font-body: var(--font-sans);
+  --text-display-xl: 56px;
+  --text-display-lg: 44px;
+  --text-display-md: 34px;
+  --text-display-sm: 28px;
+  --leading-display: 1.04;
+  --tracking-display: -0.02em;
+  --text-lg: 18px;
+  --text-md: 15px;
+  --text-sm: 13px;
+  --text-xs: 12px;
+  --leading-body: 1.55;
+  --text-label: 11px;
+  --text-label-sm: 10px;
+  --tracking-label: 0.08em;
+  --text-mono-md: 13px;
+  --text-mono-sm: 12px;
+  --text-mono-xs: 11px;
+
+  /* spacing — 4px base scale; corners machined and tight */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-module: 8px;
+  --radius-pill: 999px;
+
+  /* effects — modules extrude; wells recess; LED glows are the one place light blooms */
+  --shadow-card:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55), inset 0 -1px 0 rgba(0, 0, 0, 0.18),
+    0 1px 2px rgba(0, 0, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.25);
+  --shadow-raised:
+    inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 rgba(0, 0, 0, 0.22),
+    0 2px 4px rgba(0, 0, 0, 0.5), 0 4px 10px rgba(0, 0, 0, 0.3);
+  --shadow-card-dark:
+    inset 0 1px 0 rgba(255, 255, 255, 0.07), inset 0 -1px 0 rgba(0, 0, 0, 0.6),
+    0 1px 2px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.3);
+  --shadow-subplate:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -1px 0 rgba(0, 0, 0, 0.15),
+    0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-inset:
+    inset 0 1px 3px rgba(0, 0, 0, 0.35),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.35);
+  --shadow-inset-deep:
+    inset 0 2px 6px rgba(0, 0, 0, 0.6), inset 0 1px 2px rgba(0, 0, 0, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+  --shadow-tray:
+    inset 0 1px 3px rgba(0, 0, 0, 0.28), inset 0 -1px 0 rgba(255, 255, 255, 0.4);
+  --shadow-tray-dark:
+    inset 0 2px 4px rgba(0, 0, 0, 0.55),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.06);
+  --glow-ok: 0 0 6px rgba(181, 250, 21, 0.7), 0 0 2px rgba(181, 250, 21, 0.9);
+  --glow-warn: 0 0 6px rgba(234, 242, 18, 0.7), 0 0 2px rgba(234, 242, 18, 0.9);
+  --glow-alert: 0 0 6px rgba(251, 44, 30, 0.75), 0 0 2px rgba(251, 44, 30, 0.9);
+  --glow-live: 0 0 6px rgba(223, 58, 44, 0.7), 0 0 2px rgba(223, 58, 44, 0.9);
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);
+  --dur-fast: 120ms;
+  --dur-med: 180ms;
+  --dur-slow: 280ms;
+
+  /* module system */
+  --rail-h: 40px;
+  --rail-cell-h: 30px;
+  --screen-bg: var(--surface-screen);
+  --screen-text: #c9c7c0;
+  --texture-perf-hole: #1b1c19;
+  --texture-perf-rim: rgba(255, 255, 255, 0.06);
+  --vent-dot: rgba(20, 21, 18, 0.45);
+  --vent-dot-on-dark: rgba(0, 0, 0, 0.55);
+  --vent-gap: 7px;
+  --fastener-size: 10px;
+  --fastener-color: #afada6;
+  --fastener-color-on-dark: #2e2f2c;
+  --port-live: var(--red-500);
+  --port-quiet: #8b8981;
+  --port-well: #111210;
+}
+
+/* The room IS the rack body: perforated steel backplane. Four fixed layers over
+   --page-mid: noise grain, punched holes (28px grid), light rim 1.2px below each
+   hole, top-lit vignette. Never set body background via the shorthand — it
+   deletes the texture. */
+html {
+  background-color: var(--page-well);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  line-height: var(--leading-body);
+  color: var(--text-on-page);
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--page-mid);
+}
+
+/* The four texture layers live on a fixed underlay (not background-attachment:
+   fixed, which forces a full-viewport re-rasterization on every scroll —
+   especially costly with the feTurbulence noise tile, and broken on iOS).
+   Visually identical: the texture stays fixed relative to the viewport. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-color: var(--page-mid);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E"),
+    radial-gradient(
+      circle at 14px 14px,
+      var(--texture-perf-hole) 0 2px,
+      transparent 2.7px
+    ),
+    radial-gradient(
+      circle at 14px 15.2px,
+      var(--texture-perf-rim) 0 2.2px,
+      transparent 2.9px
+    ),
+    radial-gradient(
+      140% 110% at 50% 0%,
+      var(--page-light) 0%,
+      var(--page-mid) 48%,
+      var(--page-well) 100%
+    );
+  background-size:
+    160px 160px,
+    28px 28px,
+    28px 28px,
+    100% 100%;
+}
+
+a {
+  color: var(--link-on-page);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--link-on-page-hover);
+}
+
+::selection {
+  background: var(--red-500);
+  color: var(--text-on-accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--red-400);
+  outline-offset: 2px;
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   Agentenna refined palette — design-system scope (Rack → Module → Section
+   → Element). Scoped to .ag-rack, the <Rack> primitive's root, so the
+   launch landing page keeps rendering on the v3 tokens above unchanged.
+   Promote to :root when the landing migrates to these primitives.
+   ════════════════════════════════════════════════════════════════════════ */
+
+/* Palette also attaches to .ag-tone-* so portaled overlays (select popups,
+   menus) that render outside the .ag-rack subtree can opt back in via class. */
+.ag-rack,
+.ag-tone-plate,
+.ag-tone-chassis {
+  /* backplane */
+  --rack: #4a4b48;
+  --rack-deep: #383a38;
+  --rack-light: #5a5b57;
+  /* module surfaces — brushed aluminum: warm taupe-gray, matte
+     (plate face sampled from the hardware reference: #afa699) */
+  --plate: #afa699;
+  --plate-raised: #bdb5a8;
+  --plate-muted: #9c9385;
+  --chassis: #262827;
+  --chassis-raised: #303231;
+  --screen: #171918;
+  /* borders */
+  --border-plate: #8a8275;
+  --border-dark: #3b3d3b;
+  --border-strong: #1f211f;
+  /* text */
+  --text-on-rack: #e3e1da;
+  --text-on-rack-muted: #b9b7b0;
+  --text-on-plate: #26241f;
+  --text-on-plate-muted: #5e584d;
+  --text-on-dark: #eceae3;
+  --text-on-dark-muted: #aaa9a3;
+  /* signal red — the only primary accent fill */
+  --signal: #ff5757;
+  --signal-hover: #e84949;
+  --signal-active: #cf3e3e;
+  --signal-text: #fdf3f0;
+  /* LEDs — small glowing indicators only, never fills */
+  --led-ok: #b5fa15;
+  --led-warning: #eaf212;
+  --led-critical: #fb2c1e;
+  --led-offline: #777872;
+
+  /* depth — modules extrude off the rack, recessed sections sink,
+       screens sink deepest; tight shadows, no floating-card blur.
+       flat hugs the rack (hairline drop only); raised clearly lifts. */
+  --shadow-module-plate:
+    inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -1px 0 rgba(0, 0, 0, 0.18),
+    0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-module-plate-raised:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -1px 0 rgba(0, 0, 0, 0.22),
+    0 3px 5px rgba(0, 0, 0, 0.4), 0 10px 22px rgba(0, 0, 0, 0.38);
+  --shadow-module-chassis:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06), inset 0 -1px 0 rgba(0, 0, 0, 0.55),
+    0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-module-chassis-raised:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08), inset 0 -1px 0 rgba(0, 0, 0, 0.6),
+    0 3px 5px rgba(0, 0, 0, 0.5), 0 10px 22px rgba(0, 0, 0, 0.45);
+  --shadow-screen:
+    inset 0 2px 6px rgba(0, 0, 0, 0.6), inset 0 1px 2px rgba(0, 0, 0, 0.5);
+  --glow-signal:
+    0 0 5px rgba(255, 87, 87, 0.75), 0 0 2px rgba(255, 87, 87, 0.9);
+  /* fine isotropic grain for plate faces — matte anodized aluminum.
+     SVG turbulence, not a repeating gradient: gradients band into visible
+     lines at close zoom, noise does not. */
+  --ag-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23g)' opacity='0.05'/%3E%3C/svg%3E");
+}
+
+/* perforated steel backplane: punched holes on a 28px grid, light rim
+   below each hole, top-lit vertical falloff */
+.ag-rack {
+  color: var(--text-on-rack);
+  background-color: var(--rack);
+  background-image:
+    radial-gradient(
+      circle at 14px 14px,
+      var(--rack-deep) 0 1.5px,
+      transparent 2.1px
+    ),
+    radial-gradient(
+      circle at 14px 15.1px,
+      rgba(255, 255, 255, 0.07) 0 1.7px,
+      transparent 2.3px
+    ),
+    linear-gradient(
+      180deg,
+      var(--rack-light) 0%,
+      var(--rack) 22%,
+      var(--rack) 78%,
+      var(--rack-deep) 100%
+    );
+  background-size:
+    28px 28px,
+    28px 28px,
+    100% 100%;
+}
+
+.ag-rack :focus-visible {
+  outline-color: var(--signal);
+}
+
+/* Silkscreen link (nav rails, module labels): tone ink, no underline.
+   Unlayered on purpose — the global `a` rule above is unlayered and would
+   otherwise beat any layered Tailwind utility on the anchor. */
+.ag-rack a.ag-nav-link {
+  color: var(--ag-text, var(--text-on-rack));
+  text-decoration: none;
+}
+
+.ag-rack a.ag-nav-link:hover {
+  color: var(--signal-active);
+}
+
+/* Tone contract. Module (and Section, when its tone is not "inherit") stamps
+   data-ag-tone; every descendant — sections, elements, stock shadcn controls —
+   reads these vars, so plate/chassis behavior lives here rather than in
+   per-component conditionals. The second half of each block remaps the shadcn
+   semantic tokens so ui/* components restyle themselves per tone. */
+[data-ag-tone="plate"],
+.ag-tone-plate {
+  --ag-surface: var(--plate);
+  --ag-surface-raised: var(--plate-raised);
+  --ag-surface-recessed: var(--plate-muted);
+  --ag-border: var(--border-plate);
+  --ag-text: var(--text-on-plate);
+  --ag-text-muted: var(--text-on-plate-muted);
+  --ag-shadow-recessed:
+    inset 0 1px 3px rgba(0, 0, 0, 0.3), inset 0 -1px 0 rgba(255, 255, 255, 0.35);
+  --ag-shadow-raised:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 1px 1px rgba(0, 0, 0, 0.18);
+  /* default section panel: light tone extrudes */
+  --ag-surface-panel: var(--ag-surface-raised);
+  --ag-shadow-panel: var(--ag-shadow-raised);
+  --ag-groove: rgba(0, 0, 0, 0.16);
+  --ag-header-edge: 0 1px 0 rgba(255, 255, 255, 0.4);
+  /* ears read as the same extrusion as the faceplate — separated by the
+     seam, not by a darker material */
+  --ag-ear-face: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--plate) 96%, #fff) 0%,
+    var(--plate) 50%,
+    color-mix(in srgb, var(--plate) 94%, #000) 100%
+  );
+  --ag-ear-seam-l:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35), inset 0 -1px 0 rgba(0, 0, 0, 0.12),
+    inset -1px 0 0 rgba(0, 0, 0, 0.16);
+  --ag-ear-seam-r:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35), inset 0 -1px 0 rgba(0, 0, 0, 0.12),
+    inset 1px 0 0 rgba(0, 0, 0, 0.16);
+  --ag-bore: color-mix(in srgb, var(--plate) 78%, #000);
+  --ag-bore-shadow:
+    inset 0 1px 2px rgba(0, 0, 0, 0.45), 0 1px 0 rgba(255, 255, 255, 0.4);
+  --ag-screw-face:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(0, 0, 0, 0.22) 0 15%,
+      rgba(0, 0, 0, 0) 30%
+    ),
+    radial-gradient(circle at 35% 30%, #ded9cd 0%, #b0a89b 48%, #7c7568 100%);
+  --ag-screw-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.55);
+
+  --background: var(--plate);
+  --foreground: var(--text-on-plate);
+  --card: var(--plate-raised);
+  --card-foreground: var(--text-on-plate);
+  --popover: var(--plate-raised);
+  --popover-foreground: var(--text-on-plate);
+  --primary: var(--signal);
+  --primary-foreground: var(--signal-text);
+  --secondary: var(--plate-raised);
+  --secondary-foreground: var(--text-on-plate);
+  --muted: var(--plate-muted);
+  --muted-foreground: var(--text-on-plate-muted);
+  --accent: var(--plate-muted);
+  --accent-foreground: var(--text-on-plate);
+  --destructive: var(--signal-active);
+  --border: var(--border-plate);
+  --input: var(--border-plate);
+  --ring: var(--signal);
+  --radius: 4px;
+}
+
+[data-ag-tone="chassis"],
+.ag-tone-chassis {
+  --ag-surface: var(--chassis);
+  --ag-surface-raised: var(--chassis-raised);
+  --ag-surface-recessed: color-mix(in srgb, var(--chassis) 45%, var(--screen));
+  --ag-border: var(--border-dark);
+  --ag-text: var(--text-on-dark);
+  --ag-text-muted: var(--text-on-dark-muted);
+  --ag-shadow-recessed:
+    inset 0 2px 5px rgba(0, 0, 0, 0.55),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+  --ag-shadow-raised:
+    inset 0 1px 0 rgba(255, 255, 255, 0.07), inset 0 -1px 0 rgba(0, 0, 0, 0.4),
+    0 1px 2px rgba(0, 0, 0, 0.4);
+  /* default section panel: dark tone recesses */
+  --ag-surface-panel: var(--ag-surface-recessed);
+  --ag-shadow-panel: var(--ag-shadow-recessed);
+  --ag-groove: rgba(0, 0, 0, 0.55);
+  --ag-header-edge: 0 1px 0 rgba(255, 255, 255, 0.04);
+  --ag-ear-face: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--chassis-raised) 88%, #000) 0%,
+    color-mix(in srgb, var(--chassis) 86%, #000) 60%,
+    color-mix(in srgb, var(--chassis) 78%, #000) 100%
+  );
+  --ag-ear-seam-l:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05), inset 0 -1px 0 rgba(0, 0, 0, 0.4),
+    inset -1px 0 0 rgba(0, 0, 0, 0.55);
+  --ag-ear-seam-r:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05), inset 0 -1px 0 rgba(0, 0, 0, 0.4),
+    inset 1px 0 0 rgba(0, 0, 0, 0.55);
+  --ag-bore: #101211;
+  --ag-bore-shadow:
+    inset 0 1px 2px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.05);
+  --ag-screw-face:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(0, 0, 0, 0.35) 0 15%,
+      rgba(0, 0, 0, 0) 30%
+    ),
+    radial-gradient(circle at 35% 30%, #4c4e4c 0%, #343635 48%, #1b1d1c 100%);
+  --ag-screw-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.12);
+
+  --background: var(--chassis);
+  --foreground: var(--text-on-dark);
+  --card: var(--chassis-raised);
+  --card-foreground: var(--text-on-dark);
+  --popover: var(--chassis-raised);
+  --popover-foreground: var(--text-on-dark);
+  --primary: var(--signal);
+  --primary-foreground: var(--signal-text);
+  --secondary: var(--chassis-raised);
+  --secondary-foreground: var(--text-on-dark);
+  --muted: var(--chassis-raised);
+  --muted-foreground: var(--text-on-dark-muted);
+  --accent: var(--chassis-raised);
+  --accent-foreground: var(--text-on-dark);
+  --destructive: var(--signal);
+  --border: var(--border-dark);
+  --input: var(--border-dark);
+  --ring: var(--signal);
+  --radius: 4px;
+}
+
+/* label typography: uppercase mono, 10–11px, tracked */
+@utility ag-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+@utility ag-label-sm {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+/* subtle mechanical LED pulse: hard steps, mostly-on duty cycle — not a fade */
+@keyframes ag-led-pulse {
+  0%,
+  68% {
+    opacity: 1;
+  }
+  69%,
+  90% {
+    opacity: 0.45;
+  }
+  91%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes led-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes led-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

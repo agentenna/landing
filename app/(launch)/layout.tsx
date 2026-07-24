@@ -1,23 +1,30 @@
 import type { Metadata, Viewport } from "next"
-import { IBM_Plex_Mono, Space_Grotesk } from "next/font/google"
+import { Chakra_Petch, IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google"
 
 import "./globals.css"
 import { cn } from "@/lib/utils"
 
-const spaceGrotesk = Space_Grotesk({
+const chakraPetch = Chakra_Petch({
   subsets: ["latin"],
-  variable: "--font-sans",
+  weight: ["400", "500", "600"],
+  variable: "--font-chakra",
+})
+
+const plexSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-plex-sans",
 })
 
 const plexMono = IBM_Plex_Mono({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-mono",
+  weight: ["400", "500"],
+  variable: "--font-plex-mono",
 })
 
 const TITLE = "Agentenna — the awareness layer for AI agents"
 const DESCRIPTION =
-  "Make your agents react to what's happening — logs, alerts, Slack, tickets — with a live, token-bounded awareness surface. Open source, self-hostable, MCP-native."
+  "Agentenna gives agents a live, token-bounded view of what's happening — messages, logs, alerts, tickets — rendered straight into context, refreshed every turn. Open source, self-hostable, MCP-native."
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://agentenna.com"),
@@ -38,7 +45,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#242522",
+  themeColor: "#0D1012",
   colorScheme: "dark",
 }
 
@@ -50,7 +57,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("antialiased", spaceGrotesk.variable, plexMono.variable)}
+      className={cn(
+        "antialiased",
+        chakraPetch.variable,
+        plexSans.variable,
+        plexMono.variable,
+      )}
     >
       <body>{children}</body>
     </html>

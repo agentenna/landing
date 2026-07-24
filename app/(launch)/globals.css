@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+/* ════════════════════════════════════════════════════════════════════════
+   Agentenna launch page — design system tokens.
+   Source: spec/design/agentenna-design-system.md §15–16.
+   Software first, hardware language second: flat graphite surfaces,
+   signal red for action, lime strictly as signal.
+   ════════════════════════════════════════════════════════════════════════ */
+
+@theme inline {
+  --font-brand: var(--font-chakra), "Chakra Petch", sans-serif;
+  --font-sans: var(--font-plex-sans), "IBM Plex Sans", sans-serif;
+  --font-mono: var(--font-plex-mono), "IBM Plex Mono", monospace;
+}
+
+@theme {
+  /* core palette */
+  --color-background: #0d1012;
+  --color-foreground: #e9e8e1;
+  --color-surface-1: #121517;
+  --color-surface-2: #161a1c;
+  --color-surface-3: #1a1d1f;
+  --color-display: #080a0b;
+
+  --color-signal: #f04452;
+  --color-signal-hover: #ff5965;
+  --color-signal-pressed: #d93645;
+  --color-lime: #b7eb32;
+  --color-lime-soft: #8faf32;
+  --color-warn: #f2a93b;
+
+  --color-dim: #a9aea3; /* text-secondary */
+  --color-muted: #7b7e81; /* text-muted */
+
+  --color-line: #2a2f32;
+  --color-line-subtle: rgba(255, 255, 255, 0.07);
+
+  /* radii — machined, tight; no soft SaaS corners */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  /* motion */
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);
+
+  --animate-led-pulse: led-pulse 2.4s ease-in-out infinite;
+  --animate-caret-blink: caret-blink 1.2s steps(2, start) infinite;
+  --animate-beam-flow: beam-flow 2.4s linear infinite;
+
+  @keyframes led-pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.55;
+    }
+  }
+
+  @keyframes caret-blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  /* signal-beam dash drift: one full dash period (3 + 9) x2 per loop */
+  @keyframes beam-flow {
+    to {
+      stroke-dashoffset: -24;
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: var(--color-signal);
+    color: #ffffff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-foreground);
+    outline-offset: 3px;
+  }
+}
+
+/* label voice: uppercase tracked mono, short hardware labels only */
+@utility ag-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+@utility ag-label-sm {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+/* Level 1 — software surface */
+@utility surface {
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-line-subtle);
+}
+
+/* Level 2 — instrument display panel (inset dark readout) */
+@utility display-panel {
+  background: var(--color-display);
+  border: 1px solid var(--color-line-subtle);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    inset 0 8px 22px rgba(0, 0, 0, 0.55);
+}
+
+/* Level 3 — chassis: flat gradient + edge highlights, no texture bake.
+   Used only for nav, the hero panel frame, and the footer strip. */
+@utility chassis {
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.016) 0 1px,
+      transparent 1px 3px
+    ),
+    linear-gradient(180deg, #191d20 0%, #14181a 55%, #111416 100%);
+  border: 1px solid var(--color-line);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.5),
+    0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

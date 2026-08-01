@@ -137,13 +137,16 @@ export function Hero() {
           — The awareness layer for AI agents
         </p>
         <h1 className="font-brand mt-5 text-[42px] leading-[1.02] font-normal tracking-tight text-balance sm:text-6xl">
-          Your agent already knows.
+          Situational awareness for AI agents.
         </h1>
         <p className="text-dim mt-6 max-w-lg text-lg leading-relaxed">
           Agentenna gives agents a live, token-bounded view of what&apos;s
           happening — messages, logs, alerts, tickets — rendered straight into
           context, refreshed every turn. Inspect the details, rewind the
-          history, wake up when it matters.
+          history, wake up when it matters.{" "}
+          <span className="text-foreground font-medium">
+            Your agent already knows.
+          </span>
         </p>
 
         <div className="mt-8 flex flex-wrap items-center gap-3">

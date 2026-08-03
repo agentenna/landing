@@ -1,4 +1,5 @@
-import { ArrowUpRight, Star } from "lucide-react"
+import { ArrowRight, Star } from "lucide-react"
+import Link from "next/link"
 
 import { CopyButton } from "./copy-button"
 import { GITHUB, MANIFESTO } from "./links"
@@ -137,16 +138,13 @@ export function Hero() {
           — The awareness layer for AI agents
         </p>
         <h1 className="font-brand mt-5 text-[42px] leading-[1.02] font-normal tracking-tight text-balance sm:text-6xl">
-          Situational awareness for AI agents.
+          Your agent already knows.
         </h1>
         <p className="text-dim mt-6 max-w-lg text-lg leading-relaxed">
           Agentenna gives agents a live, token-bounded view of what&apos;s
           happening — messages, logs, alerts, tickets — rendered straight into
           context, refreshed every turn. Inspect the details, rewind the
-          history, wake up when it matters.{" "}
-          <span className="text-foreground font-medium">
-            Your agent already knows.
-          </span>
+          history, wake up when it matters.
         </p>
 
         <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -166,13 +164,13 @@ export function Hero() {
           </a>
         </div>
 
-        <a
+        <Link
           href={MANIFESTO}
           className="text-dim hover:text-foreground mt-7 inline-flex items-center gap-1 font-mono text-sm no-underline transition-colors duration-100"
         >
           Read the manifesto
-          <ArrowUpRight size={14} strokeWidth={1.5} />
-        </a>
+          <ArrowRight size={14} strokeWidth={1.5} />
+        </Link>
       </div>
 
       <SignalPanel />

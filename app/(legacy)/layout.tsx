@@ -20,13 +20,16 @@ const DESCRIPTION =
   "Make your agents react to what's happening — logs, alerts, Slack, tickets — with a live, token-bounded awareness surface. Open source, self-hostable, MCP-native."
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://agentenna.com"),
+  metadataBase: new URL("https://www.agentenna.com"),
   title: TITLE,
   description: DESCRIPTION,
+  /* Preserved-but-unlinked pages. Crawlable (see app/robots.ts) so this is
+     actually read, but never indexed. */
+  robots: { index: false, follow: false },
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
-    url: "https://agentenna.com",
+    url: "https://www.agentenna.com",
     siteName: "Agentenna",
     type: "website",
   },

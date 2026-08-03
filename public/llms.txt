@@ -1,0 +1,61 @@
+# Agentenna
+
+> Agentenna is the awareness layer for AI agents: a live, token-bounded view of
+> what's happening — messages, logs, alerts, tickets — rendered straight into
+> an agent's context and refreshed every turn. Open source (Apache-2.0),
+> self-hostable, MCP-native.
+
+Memory gave agents a past. Tools gave them hands. Agentenna gives them the
+present. The test of the system is one sentence: when you turn to your agent,
+it already knows.
+
+## The awareness surface
+
+One bounded slot (`<agentenna-awareness>`) is composed into the agent's context
+and replaced every turn — never an unbounded feed. It carries five signal
+kinds:
+
+- **Events** — what happened (append-only, newest first).
+- **States** — what is true right now (overwritten, not accumulated).
+- **Tasks** — what awaits judgment (durable work).
+- **Instructions** — how the operator wants a kind of signal read.
+- **Learnings** — how the agent learned to read a kind of signal.
+
+Every fact is compact in front and complete behind: any item can be inspected
+and any history rewound. Seeing is not waking — most signals are only seen;
+triggers wake a receiver for the few that cannot wait.
+
+## Architecture
+
+- **Antenna** — the client: emits signals and reads the surface.
+- **Station** — one self-hosted deployable where signals live; coordinates
+  channels so many can broadcast and many can listen.
+- **Channels** — shared buses; emit once, every reader keeps its own position.
+
+## Install
+
+```
+pip install agentenna              # client only
+pip install "agentenna[station]"   # client + Station
+agentenna hello                    # emits sample signals, prints the surface
+
+agentenna serve --db .agentenna/agentenna.db --port 1234
+agentenna emit prod.errors "Checkout 5xx rate jumped to 12%" \
+  --kind fault --severity crit --db .agentenna/agentenna.db
+agentenna install claude-code      # wire up a reader
+```
+
+Python 3.12+, one process, one SQLite file. Self-hosted, no account, no
+telemetry.
+
+## Links
+
+- Site: https://www.agentenna.com
+- Manifesto: https://www.agentenna.com/manifesto
+- Repository: https://github.com/agentenna/agentenna
+- PyPI: https://pypi.org/project/agentenna/
+- API cheatsheet: https://github.com/agentenna/agentenna/blob/main/docs/cheatsheet.md
+- Host guides: https://github.com/agentenna/agentenna/blob/main/docs/hosts/README.md
+- Examples: https://github.com/agentenna/agentenna/tree/main/examples
+
+Pronounced a-gen-TEN-uh.

@@ -32,15 +32,19 @@ export function Nav() {
         </Link>
 
         <nav className="ml-6 hidden items-center gap-1 sm:flex">
-          {LINKS.map(([name, href]) => (
-            <a
-              key={name}
-              href={href}
-              className="font-brand text-dim hover:text-foreground rounded-sm px-3 py-2 text-sm font-medium no-underline transition-colors duration-100 hover:bg-white/4"
-            >
-              {name}
-            </a>
-          ))}
+          {LINKS.map(([name, href]) => {
+            const className =
+              "font-brand text-dim hover:text-foreground rounded-sm px-3 py-2 text-sm font-medium no-underline transition-colors duration-100 hover:bg-white/4"
+            return href.startsWith("/") ? (
+              <Link key={name} href={href} className={className}>
+                {name}
+              </Link>
+            ) : (
+              <a key={name} href={href} className={className}>
+                {name}
+              </a>
+            )
+          })}
         </nav>
 
         <span className="ag-label-sm text-muted ml-auto hidden items-center gap-2 pr-3 md:flex">

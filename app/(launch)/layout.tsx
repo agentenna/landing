@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next"
 import { Chakra_Petch, IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google"
 
 import "./globals.css"
+import { SITE } from "@/components/launch/links"
 import { cn } from "@/lib/utils"
 
 const chakraPetch = Chakra_Petch({
@@ -27,13 +28,14 @@ const DESCRIPTION =
   "Agentenna gives agents a live, token-bounded view of what's happening — messages, logs, alerts, tickets — rendered straight into context, refreshed every turn. Open source, self-hostable, MCP-native."
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://agentenna.com"),
+  metadataBase: new URL(SITE),
   title: TITLE,
   description: DESCRIPTION,
+  alternates: { canonical: "/" },
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
-    url: "https://agentenna.com",
+    url: SITE,
     siteName: "Agentenna",
     type: "website",
   },
